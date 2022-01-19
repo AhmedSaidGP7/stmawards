@@ -42,7 +42,7 @@ def index(request):
             return render(request, "awardsapp/index.html", {
                 "form" : NewMemberForm(),
                 "message" : f"لقد قمت بتسجيل بياناتك, انسخ الرابط التالي وشاركه مع اصدقائك لتفز!",
-                "message2" : f"https://smarttargetkwt.com/{personPhone}"
+                "message2" : f"https://awards.mwatansuez.com/{personPhone}"
             })  
         else:
             return render(request, "awardsapp/index.html", {
