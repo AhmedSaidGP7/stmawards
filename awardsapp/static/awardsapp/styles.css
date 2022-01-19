@@ -1,0 +1,16 @@
+.arabic
+{
+    direction: rtl;
+}
+
+.form-check .form-check-input {
+    float: right;
+    margin-right: -1.5em;
+}
+
+.fas{
+    color: #1c5c56 !important;
+    font-size: 6em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
