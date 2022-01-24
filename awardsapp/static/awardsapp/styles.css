@@ -8,9 +8,94 @@
     margin-right: -1.5em;
 }
 
-.fas{
+.fas , .far{
     color: #1c5c56 !important;
     font-size: 6em;
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+.stmawardslandingpage
+{
+    background: white;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 999999999999999999999999;
+    position:absolute;
+    overflow-x:hidden;
+    display: block;
+}
+
+body{
+    overflow: hidden;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+.form-control::-webkit-outer-spin-button,
+.form-control::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.form-control[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* Loading page */
+
+  .dots-container {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: calc(100vh - 365px);
+  }
+  
+  .pulse-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 25px;
+    background-color: #00aeff;
+  }
+  
+  .pulse-dot-1 {
+    opacity: 0.5;
+    animation: pulse 1.5s ease infinite;
+  }
+  
+  .pulse-dot-2 {
+    animation: pulse 1.5s ease infinite;
+    animation-delay: 0.5s;
+  }
+  
+  .pulse-dot-3 {
+    animation: pulse 1.5s ease infinite;
+    animation-delay: 1s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.4;
+      transform: scale(1, 1);
+    }
+  
+    50% {
+      opacity: 1;
+      transform: scale(1.2, 1.2);
+    }
+  
+    100% {
+      opacity: 0.4;
+      transform: scale(1, 1);
+    }
+  }
+  
+  .loadingpageLogo
+  {
+    max-width: 250px;
+    display: block;
+    position: relative;
+    top: 250px;
+  }

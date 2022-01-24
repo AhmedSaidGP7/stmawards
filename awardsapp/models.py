@@ -5,9 +5,9 @@ from django.db import models
 
 class Person(models.Model):
     personFirstName = models.CharField(max_length=64)
-    personSurName = models.CharField(max_length=64)
-    personEmail = models.CharField(max_length=64)
-    personPhone = models.CharField(max_length=200)
+    personSurName = models.CharField(max_length=64, null=True)
+    personEmail = models.CharField(max_length=64, null=True )
+    personPhone = models.IntegerField()
     personGender = models.CharField(max_length=12)
     personCounter = models.IntegerField()	
     personDoesHeKnow = models.CharField(max_length=12)

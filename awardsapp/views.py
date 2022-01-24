@@ -8,17 +8,18 @@ from django import forms
 
 
 # Create your views here.
+
 class NewMemberForm(forms.Form):
     STATUSCHOICES = (
     (1, ("ذكر")),
     (2, ("أنثى"))
 )
-    coustmerFirstName = forms.CharField(label="الأسم الأول", widget=forms.TextInput(attrs={'class': 'form-control'}))
-    coustmerSurName = forms.CharField(label="الأسم الثاني" , widget=forms.TextInput(attrs={'class': 'form-control'}))
-    coustomerMail = forms.EmailField(label="البريد الإلكتروني" , widget=forms.TextInput(attrs={'class': 'form-control'}))
-    coustomerPhone = forms.CharField(label="رقم الهاتف", widget=forms.TextInput(attrs={'class': 'form-control'}))
-    coustomerGender = forms.ChoiceField(choices= STATUSCHOICES, label="", widget=forms.Select(attrs={'class': 'form-control'}))
+    coustmerFirstName = forms.CharField(label="الأسم الأول", widget=forms.TextInput(attrs={'class': 'form-control'}),)
+    coustmerSurName = forms.CharField(label="الأسم الثاني" , widget=forms.TextInput(attrs={'class': 'form-control'}) , required=False)
+    coustomerMail = forms.EmailField(label="البريد الإلكتروني" , widget=forms.TextInput(attrs={'class': 'form-control'}) , required=False)
+    coustomerPhone = forms.IntegerField(label="رقم الهاتف", widget=forms.NumberInput(attrs={'class': 'form-control'}))
     
+
 # The Index page
 def index(request):
     if request.method == "GET":
@@ -59,8 +60,12 @@ def countIn(request, personPhone):
     isExist = Ips.objects.filter(theIp = ip)     
     if isExist:
         return HttpResponseRedirect(f"https://smarttargetkwt.com/")
-    person = Person.objects.get(personPhone=personPhone)
-    newCounter = person.personCounter + 1
-    update = Person.objects.filter(personPhone=personPhone).update(personCounter=newCounter)
-    newID = Ips.objects.create(theIp = ip)
-    return HttpResponseRedirect(f"https://smarttargetkwt.com/")
+    
+    person = Person.objects.filter(personPhone=personPhone)
+    if person:
+        newCounter = person.personCounter + 1
+        update = Person.objects.filter(personPhone=personPhone).update(personCounter=newCounter)
+        newID = Ips.objects.create(theIp = ip)
+        return HttpResponseRedirect(f"https://smarttargetkwt.com/")
+    else:
+        return HttpResponseRedirect(f"https://smarttargetkwt.com/")
