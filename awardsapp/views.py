@@ -63,6 +63,7 @@ def countIn(request, personPhone):
     
     person = Person.objects.filter(personPhone=personPhone)
     if person:
+        person = Person.objects.get(personPhone=personPhone)
         newCounter = person.personCounter + 1
         update = Person.objects.filter(personPhone=personPhone).update(personCounter=newCounter)
         newID = Ips.objects.create(theIp = ip)
