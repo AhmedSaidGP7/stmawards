@@ -113,8 +113,9 @@ USE_I18N = True
 
 USE_TZ = True
 
+X_FRAME_OPTIONS = 'ALLOW-FROM https://smarttargetkwt.com/'
+CSRF_TRUSTED_ORIGINS = ['https://smarttargetkwt.com/']
 CSRF_COOKIE_SAMESITE = None
-CSRF_COOKIE_SECURE = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
