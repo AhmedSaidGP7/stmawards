@@ -1,5 +1,12 @@
 document.querySelector('#homepage3').style.display = 'none';
 document.querySelector('.homepage2').style.display = 'none';
+document.querySelector('#home-q2').style.display = 'none';
+document.querySelector('#home-q3').style.display = 'none';
+document.querySelector('#home-q4').style.display = 'none';
+document.querySelector('#thenextbutton').style.display = 'none';
+
+
+
 var theCounter = 3;
 function pageLoaded() {
    const loadedpage =  document.querySelector('.stmawardslandingpage');
@@ -11,6 +18,33 @@ function pageLoaded() {
 function myCounter(){
     theCounter--;
     document.getElementById("numberOfTrials").innerHTML = theCounter;
+}
+
+
+function q2()
+{
+    const q1 = document.querySelector('#home-q1');
+    const q2 = document.querySelector('#home-q2');
+    q2.style.display = 'block';
+    q1.style.display = 'none';
+}
+
+function q3()
+{
+    const q2 = document.querySelector('#home-q2');
+    const q3 = document.querySelector('#home-q3');
+    q2.style.display = 'none';
+    q3.style.display = 'block';
+
+}
+
+function q4()
+{
+    const q3 = document.querySelector('#home-q3');
+    const q4 = document.querySelector('#home-q4');
+    q3.style.display = 'none';
+    q4.style.display = 'block';
+
 }
 
 function page2() {

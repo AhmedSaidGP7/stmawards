@@ -30,9 +30,9 @@ def index(request):
         personFirstName = request.POST["coustmerFirstName"]
         personSurName = request.POST["coustmerSurName"]
         personEmail = request.POST["coustomerMail"]
-        personPhone = request.POST["coustomerPhone"]
-        personGender = request.POST["coustomerGender"]    
+        personPhone = request.POST["coustomerPhone"]   
         personDoesHeKnow =  request.POST["buttonnory"]
+        personGender = request.POST["coustomerGender"] 
         personFineorNot =  request.POST["fineornot"]
         personAgeGroup =  request.POST["theage"]   
         personCounter = 0

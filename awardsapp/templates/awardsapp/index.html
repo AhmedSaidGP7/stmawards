@@ -31,7 +31,9 @@
         </div>          
       </div>
       <!-- Loading page ending-->
-
+      <div class="heroo align-middle d-flex justify-content-center align-middle">
+                  <h4 class="herooH">اربح جوائر قيمة</h4>
+      </div>
         <main class="container p-5 ">
          
               {% if message %}
@@ -51,54 +53,55 @@
 
                 
                 <!-- Page 1 -->
+              
                 <div class="homepage1">
                   <h2 class="mb-3 arabic">اجب على بعض الأسئلة</h2> <br>
                 
                   <div id="home-q1">
-                      <h5 class="mb-3 arabic">هل تعرف Smart Target ؟</h5>
+                      <h5 class="mb-3 arabic">1- هل تعرف Smart Target ؟</h5>
                       <div class="my-3">
                         <div class="form-check">
-                          <input id="credit" name="buttonnory" type="radio" class="form-check-input" checked="" value="yes" required="">
+                          <input id="credit" name="buttonnory" type="radio" onclick="q2()" class="form-check-input"  value="yes" required="">
                           <label class="form-check-label">نعم</label>
                         </div> <br>
                         <div class="form-check">
-                          <input id="credit" name="buttonnory" type="radio" class="form-check-input"  value="no" required="">
+                          <input id="credit" name="buttonnory" type="radio" onclick="q2()"  class="form-check-input"  value="no" required="">
                           <label class="form-check-label">لا</label>
                         </div>
                       </div> <br>
                   </div>
 
                   <div id="home-q2">
-                    <h5 class="mb-3 arabic">ما مدى رضاك عن خدماتنا ؟</h5>
+                    <h5 class="mb-3 arabic">2- ما مدى رضاك عن خدماتنا ؟</h5>
                     <div class="my-3">
                       <div class="form-check">
-                        <input id="credit" name="fineornot" type="radio" class="form-check-input" checked="" value="good" required="">
+                        <input id="credit" name="fineornot" type="radio" class="form-check-input" onclick="q3()" value="good" required="">
                         <label class="form-check-label">راضي</label>
                       </div> <br>
                       <div class="form-check">
-                        <input id="credit" name="fineornot" type="radio" class="form-check-input"  value="natural" required="">
+                        <input id="credit" name="fineornot" type="radio" class="form-check-input" onclick="q3()" value="natural" required="">
                         <label class="form-check-label">محايد</label>
                       </div> <br>
                       <div class="form-check">
-                        <input id="credit" name="fineornot" type="radio" class="form-check-input"  value="bad" required="">
+                        <input id="credit" name="fineornot" type="radio" class="form-check-input" onclick="q3()"  value="bad" required="">
                         <label class="form-check-label">غير راضي</label>
                       </div> 
                     </div> 
                     </div>
                     
                     <div id="home-q3">
-                      <h5 class="mb-3 arabic">ماهي فئتك العمرية ؟</h5>
+                      <h5 class="mb-3 arabic">3- ماهي فئتك العمرية ؟</h5>
                       <div class="my-3">
                         <div class="form-check">
-                          <input id="credit" name="theage" type="radio" class="form-check-input" checked="" value="18-24" required="">
+                          <input id="credit" name="theage" type="radio" class="form-check-input" onclick="q4()" value="18-24" required="">
                           <label class="form-check-label">18-24</label>
                         </div> <br>
                         <div class="form-check">
-                          <input id="credit" name="theage" type="radio" class="form-check-input" value="25-34" required="">
+                          <input id="credit" name="theage" type="radio" class="form-check-input" onclick="q4()"value="25-34" required="">
                           <label class="form-check-label">25-34</label>
                         </div> <br>
                         <div class="form-check">
-                          <input id="credit" name="theage" type="radio" class="form-check-input" value="+34" required="">
+                          <input id="credit" name="theage" type="radio" class="form-check-input" onclick="q4()" value="+34" required="">
                           <label class="form-check-label">+ 34</label>
                         </div> 
                       </div> 
@@ -108,17 +111,17 @@
                         <h5 class="mb-3 arabic">ماهو نوعك؟</h5>
                         <div class="my-3">
                           <div class="form-check">
-                            <input id="credit" name="coustomerGender" type="radio" class="form-check-input" checked="" value="male" required="">
+                            <input id="credit" name="coustomerGender" type="radio" class="form-check-input" onclick="page2()" value="male" required="">
                             <label class="form-check-label">ذكر</label>
                           </div> <br>
                           <div class="form-check">
-                            <input id="credit" name="coustomerGender" type="radio" class="form-check-input" value="female" required="">
+                            <input id="credit" name="coustomerGender" type="radio" class="form-check-input" onclick="page2()" value="female" required="">
                             <label class="form-check-label">انثى</label>
                           </div> <br>
                         
                         </div> 
                         </div>
-                      <button type="button" onclick="page2()" class="w-100 btn btn-primary btn-lg">التالي</button>
+                      <button id = 'thenextbutton' type="button" onclick="page2()" class="w-100 btn btn-primary btn-lg">التالي</button>
 
                   </div>  
                 
