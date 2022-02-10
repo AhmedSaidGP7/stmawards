@@ -43,7 +43,7 @@ def index(request):
             return render(request, "awardsapp/index.html", {
                 "form" : NewMemberForm(),
                 "message" : f"لقد قمت بتسجيل بياناتك, انسخ الرابط التالي وشاركه مع اصدقائك لتفز!",
-                "message2" : f"https://awards.mwatansuez.com/{personPhone}"
+                "message2" : f"https://stmawards.azurewebsites.net//{personPhone}"
             })  
         else:
             return render(request, "awardsapp/index.html", {
@@ -59,7 +59,7 @@ def countIn(request, personPhone):
         ip = request.META.get('REMOTE_ADDR')
     isExist = Ips.objects.filter(theIp = ip)     
     if isExist:
-        return HttpResponseRedirect(f"https://smarttargetkwt.com/")
+        return HttpResponseRedirect(f"https://rosesclinickwt.com/")
     
     person = Person.objects.filter(personPhone=personPhone)
     if person:
@@ -67,6 +67,6 @@ def countIn(request, personPhone):
         newCounter = person.personCounter + 1
         update = Person.objects.filter(personPhone=personPhone).update(personCounter=newCounter)
         newID = Ips.objects.create(theIp = ip)
-        return HttpResponseRedirect(f"https://smarttargetkwt.com/")
+        return HttpResponseRedirect(f"https://rosesclinickwt.com/")
     else:
-        return HttpResponseRedirect(f"https://smarttargetkwt.com/")
+        return HttpResponseRedirect(f"https://rosesclinickwt.com/")
