@@ -32,7 +32,7 @@
       </div>
       <!-- Loading page ending-->
       <div class="heroo align-middle d-flex justify-content-center align-middle">
-                  <h4 class="herooH">اربح جوائر قيمة</h4>
+                  <h4 class="herooH">اربحي جوائز قيمة</h4>
       </div>
         <main class="container p-5 ">
          
@@ -58,7 +58,7 @@
                   <h2 class="mb-3 arabic">اجب على بعض الأسئلة</h2> <br>
                 
                   <div id="home-q1">
-                      <h5 class="mb-3 arabic">1- هل تعرف Smart Target ؟</h5>
+                      <h5 class="mb-3 arabic">1- هل تعرفي Roses clinic ؟</h5>
                       <div class="my-3">
                         <div class="form-check">
                           <input id="credit" name="buttonnory" type="radio" onclick="q2()" class="form-check-input"  value="yes" required="">
@@ -133,22 +133,22 @@
                         <thead>
                       <tr>
                         
-                        <th data-bs-toggle="modal" onclick="myCounter()" data-bs-target="#exampleModal" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
-                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
-                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
+                        <th data-bs-toggle="modal" onclick="myCounter()" data-bs-target="#exampleModal" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
+                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
+                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                       
-                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
-                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
-                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
+                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
+                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
+                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
                       </tr>
                       <tr>
-                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
-                        <th data-bs-toggle="modal"  onclick="myCounter()" data-bs-target="#exampleModal" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
-                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><i class="fas fa-gift d-flex justify-content-center"></i></th>
+                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
+                        <th data-bs-toggle="modal"  onclick="myCounter()" data-bs-target="#exampleModal" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
+                        <th data-bs-toggle="modal" data-bs-target="#exampleModal2" scope="col"><img class="giftpic" src="{% static 'awardsapp/mgift.png' %}"/></th>
                       </tr>
                     
                     </tbody>
@@ -217,7 +217,7 @@
       </div>
       <div class="modal-body">
         <h6 class="text-center">لم يحالفك الحظ هذه المرة!</h6>
-        <i class="far fa-sad-tear d-flex justify-content-center"></i>
+        <img class="giftpic" src="{% static 'awardsapp/empty.png' %}"/>
       </div>
       <div class="modal-footer">
         <button type="button"  data-bs-dismiss="modal" class="btn btn-primary">جرب مرة اخرى!</button>
@@ -235,7 +235,7 @@
       </div>
       <div class="modal-body">
         <h6 class="text-center">لقد ربحت معانا! انتقل إلى المرحلة التالية لإستلام هديتك</h6>
-        <i class="fas fa-gifts d-flex justify-content-center"></i>
+        <img class="giftpic" src="{% static 'awardsapp/notnullgift.png' %}"/>
       </div>
       <div class="modal-footer">
         <button type="button"  onclick="page3()" data-bs-dismiss="modal" class="btn btn-primary">المرحلة التالية</button>

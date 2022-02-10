@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-b#x@xpp^+sfu#s@9d-b_&9qe@m#am_fv&$pghmx6e20)$qyn-!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["stmawards.azurewebsites.net"]
+ALLOWED_HOSTS = ["stmawards.azurewebsites.net" ,"127.0.0.1"]
 
 
 # Application definition
@@ -114,7 +114,7 @@ USE_I18N = True
 USE_TZ = True
 
 X_FRAME_OPTIONS = 'ALLOW-FROM https://stmawards.azurewebsites.net/'
-CSRF_TRUSTED_ORIGINS = ['stmawards.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://stmawards.azurewebsites.net']
 CSRF_COOKIE_SAMESITE = None
 
 # Static files (CSS, JavaScript, Images)

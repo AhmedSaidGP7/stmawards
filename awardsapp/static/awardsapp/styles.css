@@ -120,3 +120,17 @@ body{
     font-family: cairo;
     font-size: 44px;
   }
+
+  .giftpic
+  {
+    margin: auto;
+    display: table;
+  }
+
+  .giftpic:hover
+  {
+    margin: auto;
+    display: table;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+  }
