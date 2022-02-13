@@ -40,10 +40,10 @@ def index(request):
         isExist = Person.objects.filter(personPhone = personPhone)
         if not isExist:
             newPerson = Person.objects.create(personFineorNot=personFineorNot,personAgeGroup=personAgeGroup, personDoesHeKnow=personDoesHeKnow, personFirstName=personFirstName, personSurName=personSurName, personEmail=personEmail, personPhone=personPhone, personGender=personGender, personCounter=personCounter)
-            return render(request, "awardsapp/index.html", {
+            return render(request, "awardsapp/done.html", {
                 "form" : NewMemberForm(),
                 "message" : f"لقد قمت بتسجيل بياناتك, انسخ الرابط التالي وشاركه مع اصدقائك لتفز!",
-                "message2" : f"https://stmawards.azurewebsites.net//{personPhone}"
+                "message2" : f"https://stmawards.azurewebsites.net/{personPhone}"
             })  
         else:
             return render(request, "awardsapp/index.html", {

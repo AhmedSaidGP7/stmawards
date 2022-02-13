@@ -125,6 +125,7 @@ body{
   {
     margin: auto;
     display: table;
+    width: 6rem;
   }
 
   .giftpic:hover
@@ -134,3 +135,8 @@ body{
     transform: scale(1.2);
     transition-duration: 0.5s;
   }
+  
+.messageparagraph
+{
+  word-wrap: break-word;
+}
